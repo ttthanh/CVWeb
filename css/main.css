@@ -1,9 +1,36 @@
-.total-home-background{
+.home-header{
+    height: 250px;
     position: fixed;
-    background-image: url(../resource/img/homepage.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    left: 0;
+    top: 0;
     width: 100%;
-    height: 100%;
-    z-index: -1;
+	
+}
+
+.img-avatar-TranTrungThanh{
+    border: 3px solid #2566dc;
+    position: absolute;
+    left: 10%;
+    top: 100px;
+    cursor: pointer;
+    border-radius: 50%;
+	transition: left 2s;
+	transition-delay: 0.5s;
+}
+.img-avatar-TranTrungThanh:hover{
+	left:30%
+}
+
+.home-footer{
+	float: left;
+    width: 100%;
+    text-align: center;
+}
+.top-of-page{
+	background-image: url('../resource/img/TranTrungThanh-Background.jpg');
+	color:white;
+}
+.text-greeting-tran-Trung-Thanh{
+	opacity:0;
+	padding-left: 10%;
 }
