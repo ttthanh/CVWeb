@@ -10,27 +10,85 @@
 .img-avatar-TranTrungThanh{
     border: 3px solid #2566dc;
     position: absolute;
-    left: 10%;
-    top: 100px;
-    cursor: pointer;
-    border-radius: 50%;
-	transition: left 2s;
-	transition-delay: 0.5s;
-}
-.img-avatar-TranTrungThanh:hover{
-	left:30%
+    left: 15%;
+    top: 120px;
 }
 
+.body-footer{
+	width:100%;
+	float:left ;
+	margin-top:215px
+}
 .home-footer{
-	float: left;
+    float: left;
     width: 100%;
     text-align: center;
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+}
+.home-footer p{
+	padding:20px 0px;
+	margin: 0px;
 }
 .top-of-page{
-	background-image: url('../resource/img/TranTrungThanh-Background.jpg');
 	color:white;
+	    box-shadow: 0px 0px 6px 4px #6f6f6f;
 }
+
+.font-for-home-page{
+	    font-size: 20px;
+    float: left;
+    width: 60%;
+    margin-left: 26%;
+    margin-top: 85px;
+    font-family: monospace;
+}
+
+.top-page-image-1{
+	background-image: url('../resource/img/TranTrungThanh-background-4.jpg');
+}
+
+.top-page-image-2{
+	background-image: url('../resource/img/TranTrungThanh-background-3.jpg');
+}
+
+.top-page-image-3{
+	background-image: url('../resource/img/TranTrungThanh-background-2.jpg');
+}
+
 .text-greeting-tran-Trung-Thanh{
 	opacity:0;
 	padding-left: 10%;
+}
+.top-navigate-page{
+    float: left;
+    width: 100%;
+    margin: 15px 0px;
+}
+
+.nav-top-menu-thanh{
+    background-color: #34403f;
+    color: white !important;
+    text-decoration: none !important;
+    margin: 0px 8px;
+    padding: 5px 15px;
+    position: relative;
+    border: 1px solid #a08f8f;
+}
+
+.nav-top-menu-thanh::after{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    content: "";
+    border: solid;
+    border-width: 15px 15px 0px 0px;
+    border-color: red transparent transparent transparent;
+	
+}
+
+.nav-top-menu-thanh:hover{
+	background-color:#a51010;
+	border: 1px solid #a24848;
 }
