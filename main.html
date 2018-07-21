@@ -8,6 +8,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="shortcut icon" href="resource/img/favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">	
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	
@@ -31,21 +32,41 @@
 				</div>
 			</div>
 			
-			<div class="d-xs-block d-sm-none">
-				<span>
-					AAAA
-				</span>
+			<div class="d-xs-block d-sm-none justify-content-end">
+				<div class="top-navigate-page">
+					<button type="button" class="btn btn-warning btn-lg" onclick="OpenNavigate()"><i class="fas fa-align-left"></i></button>
+				</div>
+				<div class="hidden-navigate-thanh bg-secondary">
+					<div class="text-center text-menu">
+						<i class="fas fa-ellipsis-v"></i>
+						MENU
+					</div>
+					<div class="text-warning text-com" onclick="RedirectHome()">
+						<i class="fas fa-home"></i>
+						HOME
+					</div>
+					<div class="text-warning text-com" onclick="RedirectService()">
+						<i class="fas fa-hands-helping"></i>
+						SERVICE
+					</div>
+					<div class="text-warning text-com" onclick="RedirectAbout()">
+						<i class="fas fa-info-circle"></i>
+						ABOUT
+					</div>
+				</div>
+				<div class="screen-all-foggy" onclick="CloseNaviage()">				
+				</div>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-xs-1 col-sm-2 col-md-8 col-lg-8" style="height: 150px;">
+			<div class="d-xs-1 col-sm-1 col-md-6 col-lg-8">
 			</div>
 			
-			<div class="col-xs-11 col-sm-10 col-md-4 col-lg-4">
+			<div class="col-xs-11 col-sm-11 col-md-6 col-lg-4 text-align-tran-trung-thanh">
 				<span>
 					I'm 
 				</span>
-				<h1>Tran Trung Thanh</h1>
+				<h1 class="text-name-trantrungthanh910">Tran Trung Thanh</h1>
 				<span>
 					Java Web Developer
 				</span>
@@ -61,11 +82,14 @@
 
 
 <div class="body-footer" >
+	<div class="row justify-content-center">
+		<div class="d-xs-block d-sm-none">
+			<img src="./resource/img/avatar-TranTrungThanh.jpg" alt="avatar-Tran-Trung-Thanh" class="img-thumbnail">
+		</div>
+	</div>
 	<div class="font-for-home-page">
 		<p class="text-left">This website is a bit about me. I want to make this website is more brilliant. I hobe in a future it will be perfect</p>
 	</div>
-	
-	
 </div>
 <div class="home-footer">
 	<p class="text-light bg-dark" >
