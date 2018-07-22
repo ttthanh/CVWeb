@@ -71,11 +71,11 @@
 }
 
 .top-page-image-2{
-	background-image: url('../resource/img/TranTrungThanh-background-3.jpg');
+	background-image: url('../resource/img/TranTrungThanh-background-2.jpg');
 }
 
 .top-page-image-3{
-	background-image: url('../resource/img/TranTrungThanh-background-2.jpg');
+	background-image: url('../resource/img/TranTrungThanh-background-3.jpg');
 }
 
 .text-greeting-tran-Trung-Thanh{
@@ -110,6 +110,11 @@
 }
 
 .nav-top-menu-thanh:hover{
+	background-color:#a51010;
+	border: 1px solid #a24848;
+}
+
+.top-navigate-page .active{
 	background-color:#a51010;
 	border: 1px solid #a24848;
 }
@@ -154,6 +159,10 @@
 		position: absolute;
 		right: 5%;
 		top: 10px;
+	}
+	.top-navigate-page{
+		float: left;
+		margin-left: 10px;
 	}
 }
 

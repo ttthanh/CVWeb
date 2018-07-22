@@ -3,60 +3,60 @@
 <head>
 	<title> Tran Trung Thanh | Java Web Resume </title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta name="Keywords" content="HTML,Codes,Tags,Elements,Attributes,Reference,Examples,link,Favicon,file,shortcut,icon">
-	<meta name="Description" content="HTML Tag Reference. Defines a link to the Favicon file. Codes and Examples.">
+	<meta name="Keywords" content="TranTrungThanh, Trần Trung Thành, Tran Trung Thanh, trantrungthanh910, Tran Trung Thanh 910, trần trung thành 910">
+	<meta name="Description" content="Service Page, GetSome service, news, drawing, map, anything you want">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="shortcut icon" href="resource/img/favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">	
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	
 </head>
 <body>
 
 <div class="home-header">
-	<div class="container-fluid top-of-page top-page-image-1">
+<div class="container-fluid top-of-page top-page-image-2">
 		<div class="row">
-			<div class="d-none d-sm-block">
+			<div class="d-none d-sm-none d-md-block col-lg-12">
 				<div class="top-navigate-page">
-					<a href="main.html" >
+					<a href="main.html" class="nav-top-menu-thanh">
 						HOME
 					</a>
-					<a href="service.html" class="active">
+					<a href="service.html" class="nav-top-menu-thanh active">
 						SERVICE
 					</a>
-					<a href="about.html">
+					<a href="about.html" class="nav-top-menu-thanh ">
 						ABOUT
 					</a>
 				</div>
 			</div>
 			
-			<div class="d-xs-block d-sm-none">
-				<span>
-					AAAA
-				</span>
+			<div class="d-xs-block d-sm-block d-md-none justify-content-end">
+				<div class="top-navigate-page">
+					<button type="button" class="btn btn-warning btn-lg" onclick="OpenNavigate()"><i class="fas fa-align-left"></i></button>
+				</div>
+				<div class="hidden-navigate-thanh bg-secondary">
+					<div class="text-center text-menu">
+						<i class="fas fa-ellipsis-v"></i>
+						MENU
+					</div>
+					<div class="text-warning text-com" onclick="RedirectHome()">
+						<i class="fas fa-home"></i>
+						HOME
+					</div>
+					<div class="text-warning text-com" onclick="RedirectService()">
+						<i class="fas fa-hands-helping"></i>
+						SERVICE
+					</div>
+					<div class="text-warning text-com" onclick="RedirectAbout()">
+						<i class="fas fa-info-circle"></i>
+						ABOUT
+					</div>
+				</div>
+				<div class="screen-all-foggy" onclick="CloseNaviage()">				
+				</div>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-xs-1 col-sm-2 col-md-8 col-lg-8" style="height: 150px;">
-			</div>
-			
-			<div class="col-xs-11 col-sm-10 col-md-4 col-lg-4">
-				<span>
-					I'm 
-				</span>
-				<h1>Tran Trung Thanh</h1>
-				<span>
-					Java Web Developer
-				</span>
-			</div>
-			
-		</div>
-		
-		<img alt="avatar-Tran-Trung-Thanh" class="img-avatar-TranTrungThanh" src="./resource/img/avatar-TranTrungThanh.jpg"/>
-		<p class="text-greeting-tran-Trung-Thanh">
-			Hi, Nice to meet you !
-		</p>
 	</div>
 </div>
 
@@ -72,8 +72,9 @@
 	</p>
 </div>
 <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/main.js"></script>
 <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="js/service.js"></script>
+
 
 </body>
 </html>
