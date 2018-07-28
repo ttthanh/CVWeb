@@ -3,7 +3,7 @@
     left: 0;
     top: 0;
     width: 100%;
-	
+	z-index:100;
 }
 
 .hidden-navigate-thanh .text-menu{
@@ -123,6 +123,59 @@
 	height: 150px;
 }
 
+.style-none-tran-trung-thanh{
+	display:none;
+}
+
+.body-about-thanh-skin{
+	position:fixed;
+	left:0px;
+	top:0px;
+	width:100%;
+	height:100%;
+	z-index:-1;
+}
+
+.body-about-thanh{
+	padding:100px 25px;
+
+}
+
+.spy-list{
+	position:relative;
+	padding-left:10px;
+}
+.spy-list-element{
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:100%;
+  
+}
+.spy-list-element a{
+	padding: 10px 5px;
+    border-left: 3px solid #cc8f05;
+    margin: 0px 15px 10px 15px;
+    text-decoration:none!important;
+}
+
+.spy-list-element a:hover{
+	background-color:#ffc107;
+}
+
+.about-cv-element h4{
+
+}
+
+.scrollspy-all-check{
+	border-left: 1px dashed #bdbdbd;
+    padding-left: 15px;
+}
+
+.cover-outsite-ele{
+	min-height:400px;
+}
+
 @media (max-width: 575.98px) { 
 	.img-avatar-TranTrungThanh{
 		display:none;
@@ -150,6 +203,10 @@
 	.body-footer{
 		margin-top:245px
 	}
+	.scrollspy-all-check{
+		border-left:none;
+		padding-left:0px;
+	}
 }
 
 
@@ -163,6 +220,10 @@
 	.top-navigate-page{
 		float: left;
 		margin-left: 10px;
+	}
+	.scrollspy-all-check{
+		border-left:none;
+		padding-left:0px;
 	}
 }
 
