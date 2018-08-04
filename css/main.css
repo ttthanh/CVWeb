@@ -176,6 +176,18 @@
 	min-height:400px;
 }
 
+.padding-left-5{
+	padding-left:5px;
+}
+
+.card-thanh-cs{
+    width: 100%;
+    
+}
+.body-menu-service{
+	overflow: hidden;
+}
+
 @media (max-width: 575.98px) { 
 	.img-avatar-TranTrungThanh{
 		display:none;

@@ -9,11 +9,11 @@ function CloseNaviage(){
 	$(".screen-all-foggy").css('display','none');
 }
 function RedirectHome(){
-	window.location.replace("main.html");
+	window.location.replace("../main.html");
 }
 function RedirectService(){
-	window.location.replace("service.html");
+	window.location.replace("../service.html");
 }
 function RedirectAbout(){
-	window.location.replace("about.html");
+	window.location.replace("../about.html");
 }
