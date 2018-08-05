@@ -187,6 +187,9 @@
 .body-menu-service{
 	overflow: hidden;
 }
+.overflow-hid{
+	overflow:hidden;
+}
 
 @media (max-width: 575.98px) { 
 	.img-avatar-TranTrungThanh{
