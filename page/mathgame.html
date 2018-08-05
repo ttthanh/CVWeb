@@ -3,13 +3,14 @@
 <head>
 	<title> Tran Trung Thanh | Java Web Resume </title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta name="Keywords" content="TranTrungThanh, Trần Trung Thành, Tran Trung Thanh, trantrungthanh910, Tran Trung Thanh 910, trần trung thành 910">
-	<meta name="Description" content="Service Page, GetSome service, news, drawing, map, anything you want">
+	<meta name="Keywords" content="TranTrungThanh, Trần Trung Thành, Tran Trung Thanh, trantrungthanh910, Tran Trung Thanh 910, trần trung thành 910, math, game, play, fun, play game, fun time">
+	<meta name="Description" content="This is the game for you help you be smarter">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="shortcut icon" href="../resource/img/favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="../css/main.css">
+	<link rel="stylesheet" type="text/css" href="../css/service.css">
 	
 </head>
 <body>
@@ -72,7 +73,74 @@
 	    <li class="breadcrumb-item active" aria-current="page">Math Game</li>
 	  </ol>
 	</nav>
+
+
+	<div class="row">
+		<div class="d-none d-sm-block col-sm-2 col-md-3 col-lg-3">
+		</div>
+		<div class="col-xs-12 col-sm-8 col-md-6 col-lg-6">
+			<div class="screen-to-play" id="screen-play-game">
+				
+			</div>
+			<div class="padding-for-button">
+				<div class="btn-group" role="group" aria-label="Basic example">
+					<button type="button" onclick="CheckRightOrWrong(0)" class="btn btn-danger">Wrong</button>
+					<button type="button" onclick="CheckRightOrWrong(1)" class="btn btn-success">Right</button>
+				</div>
+			</div>
+		</div>
+		<div class="d-none d-sm-block col-sm-2 col-md-3 col-lg-3">
+		</div>
+	</div>
+	
+
 </div>
+
+<!-- How To Play
+<div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">How to Play</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<!-- LoseGame -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">So sory</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Lose Game with:</p>
+        
+        <span id="the-point-int"> </span>
+        <span> point</span>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" onclick="Resetgame()" class="btn btn-primary">Play Again</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 
 
@@ -84,7 +152,7 @@
 
 <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
 <script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="../js/map.js"></script>
+<script type="text/javascript" src="../js/mathgame.js"></script>
 
 
 </body>

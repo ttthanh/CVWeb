@@ -1,0 +1,43 @@
+.screen-to-play{
+	border:1px solid gray;
+	height:300px;
+	max-width:300px;
+	margin:0px auto;
+	position:relative;
+	overflow:hidden;
+}
+
+.math-counting{
+	position:absolute;
+	padding:8px 0px;
+	width:80%;
+	left:10%;
+	top:-20px;
+}
+
+.result-point{
+	display:none;
+}
+.padding-for-button{
+	text-align: center;
+    margin-top: 20px;
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) { 
+		
+}
+
+
+@media (min-width: 768px) and (max-width: 991.98px) { 
+	
+ }
+
+
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+	
+}
+
+
+@media (min-width: 1200px) { 
+	
+}
