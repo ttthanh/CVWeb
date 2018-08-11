@@ -18,10 +18,42 @@ function RedirectAbout(){
 	window.location.replace("../about.html");
 }
 
+var mapCanvas;
+var myPosition;
+var map;
+
 function myMap() {
-	var mapProp= {
-	    center:new google.maps.LatLng(51.508742,-0.120850),
-	    zoom:5,
-	};
-	var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+  mapCanvas = document.getElementById("googleMap");
+  var myCenter = new google.maps.LatLng(10.7882639,106.7411211);
+  var mapOptions = {center: myCenter, zoom: 15};
+  map = new google.maps.Map(mapCanvas, mapOptions);
+  
+}
+
+function GetMyPosition(){
+	getLocation();
+}
+
+function getLocation() {
+
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+        alert("Geolocation is not supported by this browser.");
+    }
+    
+}
+
+function showPosition(position) {
+
+    myPosition = position.coords;
+    var myCenter = new google.maps.LatLng(myPosition.latitude, myPosition.longitude);
+    map.setCenter(myCenter);
+    var marker = new google.maps.Marker({position:myCenter});
+ 	marker.setMap(map);
+    var infowindow = new google.maps.InfoWindow({
+    	content:"You Are Here!"
+    });
+
+	infowindow.open(map,marker);
 }
