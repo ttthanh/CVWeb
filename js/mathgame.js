@@ -31,7 +31,7 @@ function StartTheGame(){
 			//console.log($(this).css("top"))
 			var valueCount = parseInt($(this).css("top")) + 1;
 			$(this).css("top", valueCount);
-			console.log(valueCount);
+			//console.log(valueCount);
 			if (valueCount >= 300){
 				//lose game
 				//alert("Asdads");
@@ -93,6 +93,7 @@ function CheckRightOrWrong(resultUser){
 	var resultMarchine = $("#screen-play-game").children().eq(0).find(".result-point").text();
 	if(parseInt(resultMarchine) == parseInt(resultUser)){
 		ClearOffThingMath();
+		DetectUpLevel();
 	}else{
 		LoseGame();
 	}
@@ -129,17 +130,22 @@ function DetectUpLevel(){
 		level = 6;
 	}
 	if(point > 90){
-		//plus and multyply and minus width 3
+		//plus and multyply and minus with 3
+		numberOfList = 3;
 		level = 7;
 	}
 	if(point > 100){
-		//plus and multyply and minus width 3 hard
+		//plus and multyply and minus with 3 hard
+		numberOfList = 3;
 		level = 8;
 	}
 	if(point > 110){
 		//plus and multyply and minus and divide
 		level = 9;
 	}
+
+	//console.log(point+'//' + numberOfList + "//" +level);
+
 }
 
 function MakeList(){
@@ -160,22 +166,32 @@ function MakeList(){
 function CreateMathAndresult(){
 	MakeList();
 
-	var resultCal = lstNumber[0];
+
+	var resultCal = parseInt(lstNumber[0]);
 	mathCalculate = resultCal;
 	for(var i = 0; i < lstSign.length; i++){
 		switch(lstSign[i]){
-			case 0:
-				mathCalculate = mathCalculate + " + " + lstNumber[i + 1];
-				resultCal = resultCal + lstNumber[i + 1];
-			break;
 			case 1:
+				mathCalculate = mathCalculate + " + " + lstNumber[i + 1];
+				resultCal = resultCal + parseInt(lstNumber[i + 1]);
+				break;
+			case 2:
 				mathCalculate = mathCalculate + " - " + lstNumber[i + 1];
-				resultCal = resultCal - lstNumber[i + 1];
-			break;
+				resultCal = resultCal - parseInt(lstNumber[i + 1]);
+				break;
+			case 3:
+				mathCalculate = mathCalculate + " * " + lstNumber[i + 1];
+				resultCal = resultCal * parseInt(lstNumber[i + 1]);
+				break;
+			case 4:
+				mathCalculate = mathCalculate + " / " + lstNumber[i + 1];
+				resultCal = resultCal / parseInt(lstNumber[i + 1]);
+				break;
 		}
 	}
 
 	var valueFalseTrue = Math.random();
+	//valueFalseTrue = 0
 
 	//console.log(mathCalculate);
 	//console.log(resultCal);
@@ -197,7 +213,35 @@ function CreateMathAndresult(){
 
 function CreateSign(){
 	var signReturn;
-	signReturn = parseInt(Math.random());
+	//signReturn = Math.floor(Math.random() * 4) + 1;
+
+	//1 +
+	//2 -
+	//3 *
+	//4 /
+	if(level <= 1){
+		signReturn = 1;
+	}
+
+	if(level > 1 && level <= 4){
+		signReturn = Math.floor(Math.random() * 2) + 1;
+	}
+
+	if(level == 5){
+		signReturn = Math.floor(Math.random() * 2) + 1;
+		if (signReturn == 2){
+			signReturn = 3;
+		}
+	}
+
+	if(level == 6){
+		signReturn = Math.floor(Math.random() * 2) + 1;
+	}
+
+	if(level > 6){
+		signReturn = Math.floor(Math.random() * 3) + 1;
+	}
+
 
 	return signReturn;
 }
@@ -209,7 +253,7 @@ function CreateNumber(){
 			numberReturn = parseInt(Math.random() * 10 );
 			break;
 		case 1:
-			numberReturn = parseInt(Math.random() * 100 );
+			numberReturn = parseInt(Math.random() * 50 );
 			break;
 		case 2:
 			numberReturn = parseInt(Math.random() * 10 );
@@ -218,17 +262,22 @@ function CreateNumber(){
 			numberReturn = parseInt(Math.random() * 10 );
 			break;
 		case 4:
-			numberReturn = parseInt(Math.random() * 100 );
+			numberReturn = parseInt(Math.random() * 20 );
 			break;
 		case 5:
+			numberReturn = parseInt(Math.random() * 10 );
 			break;
 		case 6:
+			numberReturn = parseInt(Math.random() * 10 );
 			break;
 		case 7:
+			numberReturn = parseInt(Math.random() * 10 );
 			break;
 		case 8:
+			numberReturn = parseInt(Math.random() * 10 );
 			break;
 		case 9:
+			numberReturn = parseInt(Math.random() * 10 );
 			break;	
 	}
 
