@@ -6,6 +6,15 @@
 	position:relative;
 	overflow:hidden;
 }
+.pointing-complimant{
+    max-width: 100px;
+    margin: 0px auto;
+    height: 40px;
+    background-color: red;
+    color: white;
+    text-align: center;
+    font-size: 28px;
+}
 
 .math-counting{
 	position:absolute;

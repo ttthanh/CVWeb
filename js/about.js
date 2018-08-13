@@ -23,8 +23,8 @@ function RedirectAbout(){
 $(window).scroll(function (event) {
     var topCheck = $(window).scrollTop();
 
-    if(topCheck >= 400){
-    	var topCss = topCheck - 400;
+    if(topCheck >= 420){
+    	var topCss = topCheck - 420;
     	var valueString = topCss + "px";
     	$(".spy-list-element").css("top", valueString);
     }else{

@@ -20,6 +20,7 @@ function InitTheGame(){
 	level = 0;
 	mathCalculate = '';
 	result = '';
+	$(".pointing-complimant").text(point);
 }
 
 function StartTheGame(){
@@ -94,6 +95,7 @@ function CheckRightOrWrong(resultUser){
 	if(parseInt(resultMarchine) == parseInt(resultUser)){
 		ClearOffThingMath();
 		DetectUpLevel();
+		$(".pointing-complimant").text(point);
 	}else{
 		LoseGame();
 	}
