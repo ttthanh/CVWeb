@@ -23,12 +23,14 @@ var height = 500;
 var timeBomb;
 var speedBomb;
 
+
 $(document).ready(function(){
   canvas = new fabric.StaticCanvas('myCanvas');
   canvas.setHeight(height);
   canvas.setWidth(width);
   
   fabric.Object.prototype.idObject = "";
+  fabric.Object.prototype.typeObject = "";
 
   InitGame();
 });
@@ -38,31 +40,36 @@ function InitGame(){
     canvas.setBackgroundColor("gray");
 
     InitMeterial();
-
-    console.log(canvas);
-
-    var circle = new fabric.Circle({
-      radius: 20, fill: 'green', left: 100, top: 100,idObject:'2323'
-    });
-    var triangle = new fabric.Triangle({
-      width: 20, height: 30, fill: 'blue', left: 50, top: 50,idObject:'2323AS'
-    });
-
-    canvas.add(circle, triangle);
-
+    InitPlaneAndBomb();
+    
     setTimeout(function(){
-      canvas.forEachObject(function(obj){
-        console.log("id Object");
-      });
-
-      canvas.getObjects().forEach(function(obj){
-        console.log("id Object" + obj.idObject);
+      (function animate() {
+    console.log("why not herer");
+    console.log(canvas);
+    canvas.getObjects().concat().forEach(function(obj) {
+      console.log(obj.typeObject);
+        if(obj.typeObject == "plane"){
+         
+          obj.left -= 3;
+          console.log(obj.left);
+        }
+        if(obj.typeObject == "plane1"){
           
-      });
-    },2000)
+          obj.left += 1;
+          console.log(obj.left);
+        }
+
+        if (obj.left > 1300 || obj.left < -300 || obj.top > 700) {
+          canvas.remove(obj);
+        }
+
+    });
+    fabric.util.requestAnimFrame(animate);
+    canvas.renderAll();
+})();
+    },800);
+      //animate();
     
-    
-    //InitPlaneAndBomb();
 }
 
 function InitMeterial(){
@@ -231,18 +238,58 @@ function InitMeterial(){
 
 function InitPlaneAndBomb(){
   setInterval(function() {
-    fabric.Image.fromURL('../assets/ladybug.png', function(img) {
-      img.set('left', fabric.util.getRandomInt(200, 600)).set('top', -50);
-      img.movingLeft = !!Math.round(Math.random());
-      canvas.add(img);
+    fabric.loadSVGFromURL('../resource/svg/plane.svg', (objects, options) => { 
+        let sunny = fabric.util.groupSVGElements(objects, options);
+        sunny.set({
+          left:900,
+          top:Math.floor((Math.random() * 80) + 10),
+          hasControls:false,
+          typeObject: 'plane'
+          //selectable:false
+        });
+        sunny.scaleToWidth(50);
+        sunny.scaleToHeight(50);
+
+        this.canvas.sendToBack(sunny);
+        this.canvas.add(sunny); 
+        this.canvas.calcOffset();
+        this.canvas.renderAll();
     });
-  }, 250);
+    console.log("run SVG 1");
+  }, 1550);
 
   setInterval(function() {
-    fabric.Image.fromURL('../assets/ladybug.png', function(img) {
-      img.set('left', fabric.util.getRandomInt(200, 600)).set('top', -50);
-      img.movingLeft = !!Math.round(Math.random());
-      canvas.add(img);
+    fabric.loadSVGFromURL('../resource/svg/plane1.svg', (objects, options) => { 
+        let sunny = fabric.util.groupSVGElements(objects, options);
+        sunny.set({
+          left:0,
+          top:Math.floor((Math.random() * 150) + 130),
+          hasControls:false,
+          typeObject: 'plane1'
+          //selectable:false
+        });
+        sunny.scaleToWidth(50);
+        sunny.scaleToHeight(50);
+
+        this.canvas.sendToBack(sunny);
+        this.canvas.add(sunny); 
+        this.canvas.calcOffset();
+        this.canvas.renderAll();
     });
-  }, 3550);
+    console.log("run SVG 2");
+  }, 6550);
+
+  
+
+  
+  
+  
 }
+
+
+
+
+
+
+
+
