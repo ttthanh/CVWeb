@@ -9,7 +9,7 @@ function CloseNaviage(){
 	$(".screen-all-foggy").css('display','none');
 }
 function RedirectHome(){
-	window.location.replace("../main.html");
+	window.location.replace("/");
 }
 function RedirectService(){
 	window.location.replace("../service.html");
