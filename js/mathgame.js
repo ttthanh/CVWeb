@@ -100,6 +100,8 @@ function CheckRightOrWrong(resultUser){
 		LoseGame();
 	}
 
+	
+
 }
 
 function DetectUpLevel(){

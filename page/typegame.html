@@ -10,7 +10,7 @@
 	<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="../css/main.css">
-	
+	<link rel="stylesheet" type="text/css" href="../css/service.css">
 </head>
 <body>
 
@@ -72,8 +72,20 @@
 	    <li class="breadcrumb-item active" aria-current="page">Type Game</li>
 	  </ol>
 	</nav>
-	<div>
-		<canvas id="myCanvas"></canvas>
+	
+
+	<div class="row">
+		<div class="d-none d-xl-block col-xl-12">
+			<div class="game-type-center">
+				<canvas id="myCanvas"></canvas>
+			</div>
+		</div>
+		<div class="d-block col-lg-12 d-xl-none">
+			<div class="alert alert-danger" role="alert">
+				Sorry ! You can only play this on conputer with big screen.
+			</div>
+			
+		</div>
 	</div>
 </div>
 

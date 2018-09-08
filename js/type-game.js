@@ -551,6 +551,9 @@ function ChangeDifficult(level){
       lstContain = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
       break;
     case 2:
+      timeBomb = 1800;
+      speedBomb = 0.3;
+      lstContain = [AA,AB,AD,AG,AH,AI,AM,AN,AS,AW,AT,AX,AY,BA,BE,BI,BO,DA,DO,DY,EE,EX,FA,EN,GA,GO,HA,HE,HI,HO,ID,IF,IS,IT,OI,JO,JU,KA,KI,LA,LI,MA,ME,MI,MO];
       break;
     case 3:
       break;
@@ -570,4 +573,8 @@ function ChangeDifficult(level){
 
 
 
+window.onkeyup = function(e) {
+   var key = e.keyCode ? e.keyCode : e.which;
 
+   console.log(String.fromCharCode(key));
+}

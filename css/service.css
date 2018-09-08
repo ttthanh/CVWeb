@@ -32,6 +32,11 @@
     margin-top: 20px;
 }
 
+.game-type-center{
+    margin: 0 auto;
+    text-align: center;
+}
+
 @media (min-width: 576px) and (max-width: 767.98px) { 
 		
 }
